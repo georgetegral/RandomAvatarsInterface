@@ -6,7 +6,6 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack,
-  Image,
   Heading,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
@@ -58,7 +57,7 @@ const MainLayout = ({ children }) => {
           />
           <HStack spacing={8} alignItems={"center"}>
             <Flex alignItems="center">
-              <Heading size="md" color="green" mt={0.2} ml={1}>
+              <Heading size="md" color="gray" mt={0.2} ml={1}>
                 Random Avatars
               </Heading>
             </Flex>
