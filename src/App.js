@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './views/home';
+import Avatars from './views/avatars';
 import MainLayout from "./layouts/main";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     <MainLayout>
       <Routes>
         <Route path="/" element={<Home />}/>
+        <Route path="/avatars" element={<Avatars />}/>
       </Routes>
     </MainLayout>
     </>
