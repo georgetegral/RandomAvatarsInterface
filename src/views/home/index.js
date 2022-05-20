@@ -5,8 +5,10 @@ import {
     Text,
     Button,
     Image,
-    useToast
+    useToast,
+    Link as LinkChakra
   } from "@chakra-ui/react";
+  import { ExternalLinkIcon } from '@chakra-ui/icons'
   import { Link } from "react-router-dom";
   import { useWeb3React } from "@web3-react/core";
   import useRandomAvatars from "../../hooks/useRandomAvatars";
@@ -95,6 +97,11 @@ import {
           <Text color={"blue.600"}>
             Para mintear tu avatar, da click en "Obtén tu avatar", y acepta la transacción en tu
             billetera Metamask, espera 3 minutos para que tu avatar sea minteado con éxito. Lo podrás ver en la galería.
+          </Text>
+          <Text>
+            <LinkChakra href='https://testnets.opensea.io/collection/randomavatars-y9f9j609az' isExternal>
+             Ver la galería en OpenSea. <ExternalLinkIcon mx='2px' />
+            </LinkChakra>
           </Text>
           <Text color={"blue.700"}>
             Avatars disponibles : {availableAvatars}
