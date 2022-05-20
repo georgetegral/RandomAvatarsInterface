@@ -83,6 +83,8 @@ Create a new account at [Fleek.co](https://app.fleek.co/), and follow this instr
 
 The deployment will start, and in a few minutes you will have your dApp running on IPFS.
 
+For example, my app is running on https://bitter-voice-9172.on.fleek.co/
+
 ## References
 - [Multiavatar](https://api.multiavatar.com/)
 - [Create React App](https://github.com/facebook/create-react-app)
