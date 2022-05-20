@@ -4,9 +4,13 @@ import {
   Heading,
   Stack,
   Image,
+  Text
 } from "@chakra-ui/react";
+import useTruncatedAddress from "../../hooks/useTruncatedAddress"
 
-const AvatarCard = ({ image, name, ...props }) => {
+const AvatarCard = ({ image, owner, tokenId, ...props }) => {
+  const truncatedOwner = useTruncatedAddress(owner);
+
   return (
     <Box
       role={"group"}
@@ -52,8 +56,11 @@ const AvatarCard = ({ image, name, ...props }) => {
       </Box>
       <Stack pt={10} align={"center"}>
         <Heading fontSize={"xl"} fontFamily={"body"} fontWeight={500}>
-          {name}
+          Random Avatar #{tokenId}
         </Heading>
+        <Text >
+          Dueño: {truncatedOwner}
+        </Text>
       </Stack>
     </Box>
   );

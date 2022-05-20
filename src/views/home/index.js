@@ -5,18 +5,17 @@ import {
     Text,
     Button,
     Image,
-    Badge,
     useToast
   } from "@chakra-ui/react";
   import { Link } from "react-router-dom";
   import { useWeb3React } from "@web3-react/core";
-  import useRandomAvatars from "../../hooks/randomAvatars";
+  import useRandomAvatars from "../../hooks/useRandomAvatars";
   import { useCallback, useEffect, useState } from "react";
   
   const Home = () => {
     const [isMinting, setIsMinting] = useState(false);
     const [availableAvatars, setAvailableAvatars] = useState("");
-    const { active, account } = useWeb3React();
+    const { account } = useWeb3React();
     const randomAvatars = useRandomAvatars();
     const toast = useToast();
   
@@ -28,7 +27,7 @@ import {
         setAvailableAvatars(maxSupply - totalSupply); 
 
       }
-    }, [randomAvatars, account]);
+    }, [randomAvatars]);
   
     useEffect(() => {
       getPlatziPunksData();
