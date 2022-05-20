@@ -21,7 +21,7 @@ import {
     const randomAvatars = useRandomAvatars();
     const toast = useToast();
   
-    const getPlatziPunksData = useCallback(async () => {
+    const getRandomAvatarsData = useCallback(async () => {
       if (randomAvatars) {
         const totalSupply = await randomAvatars.methods.totalSupply().call();
 
@@ -32,8 +32,8 @@ import {
     }, [randomAvatars]);
   
     useEffect(() => {
-      getPlatziPunksData();
-    }, [getPlatziPunksData]);
+      getRandomAvatarsData();
+    }, [getRandomAvatarsData]);
   
     const mint = () => {
         setIsMinting(true);
@@ -54,7 +54,7 @@ import {
         .on("receipt", () => {
             toast({
                 title: "Transacción confirmada",
-                description: "Se ha minteado correctamente el punk",
+                description: "Se ha minteado correctamente el avatar",
                 status: "success",
             })
         })
